@@ -2,16 +2,63 @@ package apps.course.android.checkin;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    private EditText user, password;
+    private Button login;
+
+    private String userTxt = "";
+    private String passwordTxt = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        init();
+
         Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
+    }
+
+    private void init() {
+
+        user = findViewById(R.id.user);
+        password = findViewById(R.id.password);
+
+        login = findViewById(R.id.login);
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                getDataFromView();
+
+            }
+        });
+
+    }
+
+    private void getDataFromView() {
+        userTxt = user.getText().toString();
+        passwordTxt = password.getText().toString();
+
+        if(validateUserAndPassword(userTxt, passwordTxt)){
+            Toast.makeText(this, "Hola " + userTxt + ", tu password es: " + passwordTxt, Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private boolean validateUserAndPassword(String userTxt, String passwordTxt) {
+        if (passwordTxt.length() < 8) {
+            Toast.makeText(this, "Tamaño del password incorrecto.", Toast.LENGTH_LONG).show();
+            return false;
+        }
+
+        return true;
     }
 
     @Override
