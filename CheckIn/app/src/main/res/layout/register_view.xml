@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroudLogin"
-    tools:context=".MainActivity">
-
+    android:background="@color/backgroudLogin">
+    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,74 +17,90 @@
         android:background="@drawable/login_background"
         android:orientation="vertical"
         android:padding="16dp">
-
+        
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:layout_marginBottom="32dp">
-
+            
             <ImageView
                 android:layout_width="552dp"
                 android:layout_height="552dp"
                 android:src="@drawable/ic_baseline_school_24px"
-                android:tint="@color/colorAccent" />
-
+                android:tint="@color/colorAccent"/>
+            
         </RelativeLayout>
-
+        
         <EditText
-            android:id="@+id/user"
+            android:id="@+id/user_reg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/login_edit_text_background"
-            android:hint="@string/user"
-            android:maxLength="10"
+            android:hint="Enter Username"
+            android:maxLength="20"
             android:padding="10dp"
             android:singleLine="true" />
-
         <View
             android:layout_width="wrap_content"
-            android:layout_height="16dp" />
+            android:layout_height="16dp">
+
+        </View>
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/pass_reg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/login_edit_text_background"
-            android:hint="@string/password"
-            android:maxLength="10"
+            android:hint="Email address"
+            android:maxLength="20"
             android:padding="10dp"
-            android:singleLine="true" />
+            android:singleLine="true"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="16dp">
+
+        </View>
+
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_edit_text_background"
+            android:hint="Password"
+            android:maxLength="20"
+            android:padding="10dp"
+            android:singleLine="true"/>
 
         <View
             android:layout_width="wrap_content"
-            android:layout_height="16dp" />
+            android:layout_height="16dp">
 
-        <Button
-            android:id="@+id/login"
+        </View>
+
+        <EditText
+            android:id="@+id/pass_conf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/login_button_background"
-            android:singleLine="true"
-            android:text="@string/log_in"
-            android:textColor="@color/colorAccent"
-            />
-
+            android:background="@drawable/login_edit_text_background"
+            android:hint="Confirm Password"
+            android:maxLength="20"
+            android:padding="10dp"
+            android:singleLine="true"/>
         <View
             android:layout_width="wrap_content"
-            android:layout_height="16dp"/>
+            android:layout_height="16dp">
+
+        </View>
 
         <Button
+            android:id="@+id/confirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/register"
             android:background="@drawable/login_button_background"
             android:singleLine="true"
             android:text="Register"
-            android:textColor="@color/colorAccent"/>
-
-
-
-
+            android:textColor="@color/colorAccent"
+            />
     </LinearLayout>
 
 </RelativeLayout>

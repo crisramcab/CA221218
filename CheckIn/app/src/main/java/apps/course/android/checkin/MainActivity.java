@@ -9,8 +9,11 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+
+//se declaran las variables que van a ser usadas para mostrar en el input
     private EditText user, password;
     private Button login;
+
 
     private String userTxt = "";
     private String passwordTxt = "";
@@ -24,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
     }
+
+    //se inicializan las variables
 
     private void init() {
 
@@ -43,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     private void getDataFromView() {
         userTxt = user.getText().toString();
         passwordTxt = password.getText().toString();
@@ -60,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
         return true;
     }
+    
 
     @Override
     protected void onStart() {
