@@ -1,5 +1,6 @@
 package apps.course.android.checkin;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 //se declaran las variables que van a ser usadas para mostrar en el input
     private EditText user, password;
     private Button login;
+    private Button register; //declaro una variable para hacer el cambio de actividad
 
 
     private String userTxt = "";
@@ -23,10 +25,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        register = (Button) findViewById(R.id.register); //un find by id del objeto boton
+        register.setOnClickListener(new View.OnClickListener() { //le decimos que espere
+            @Override
+            public void onClick(View view) {
+                openActivity2();
+
+            }
+        });
+
+
+
+
         init();
 
         Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
     }
+
+
+    public void openActivity2(){
+        Intent intent = new Intent(this, register_view.class);
+        startActivity(intent);
+    }
+
+
 
     //se inicializan las variables
 
@@ -66,7 +88,9 @@ public class MainActivity extends AppCompatActivity {
 
         return true;
     }
-    
+
+
+
 
     @Override
     protected void onStart() {
