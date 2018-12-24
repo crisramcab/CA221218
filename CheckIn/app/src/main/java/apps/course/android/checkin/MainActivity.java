@@ -26,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         register = (Button) findViewById(R.id.register); //un find by id del objeto boton
-        register.setOnClickListener(new View.OnClickListener() { //le decimos que espere
+        register.setOnClickListener(new View.OnClickListener() { //
             @Override
             public void onClick(View view) {
-                openActivity2();
+                openActivity2();//se crea una funcion
 
             }
         });
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void openActivity2(){
+    public void openActivity2(){ //esta es la funcion para abrir la otr actividad a traves del boton
         Intent intent = new Intent(this, register_view.class);
         startActivity(intent);
     }
