@@ -4,6 +4,9 @@
     android:layout_height="match_parent"
     android:background="@color/backgroudLogin">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,6 +20,7 @@
         android:background="@drawable/login_background"
         android:orientation="vertical"
         android:padding="16dp">
+
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -102,5 +106,7 @@
             android:textColor="@color/colorAccent"
             />
     </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
