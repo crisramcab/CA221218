@@ -10,4 +10,6 @@ public class register_view extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_view);
     }
+
+
 }

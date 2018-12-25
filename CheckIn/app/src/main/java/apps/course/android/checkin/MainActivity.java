@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText user, password;
     private Button login;
     private Button register; //declaro una variable para hacer el cambio de actividad
-
+    private  long backPressed;
 
     private String userTxt = "";
     private String passwordTxt = "";
@@ -35,12 +35,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
         init();
 
         Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
     }
+
 
 
     public void openActivity2(){ //esta es la funcion para abrir la otr actividad a traves del boton
