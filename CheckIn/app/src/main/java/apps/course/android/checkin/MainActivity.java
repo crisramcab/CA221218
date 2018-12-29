@@ -10,12 +10,11 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-
-//se declaran las variables que van a ser usadas para mostrar en el input
+    //se declaran las variables que van a ser usadas para mostrar en el input
     private EditText user, password;
     private Button login;
     private Button register; //declaro una variable para hacer el cambio de actividad
-    private  long backPressed;
+    private long backPressed;
 
     private String userTxt = "";
     private String passwordTxt = "";
@@ -25,56 +24,47 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        register = (Button) findViewById(R.id.register); //un find by id del objeto boton
-        register.setOnClickListener(new View.OnClickListener() { //
-            @Override
-            public void onClick(View view) {
-                openActivity2();//se crea una funcion
-
-            }
-        });
-
-
-        init();
+        initVariables();
 
         Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
     }
 
-
-
-    public void openActivity2(){ //esta es la funcion para abrir la otr actividad a traves del boton
-        Intent intent = new Intent(this, register_view.class);
-        startActivity(intent);
-    }
-
-
-
     //se inicializan las variables
-
-    private void init() {
+    private void initVariables() {
 
         user = findViewById(R.id.user);
         password = findViewById(R.id.password);
-
         login = findViewById(R.id.login);
+        register = (Button) findViewById(R.id.register); //un find by id del objeto boton
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 getDataFromView();
-
             }
         });
 
+        register.setOnClickListener(new View.OnClickListener() { //
+            @Override
+            public void onClick(View view) {
+                linkToRegistryActivity();//se crea una funcion
+
+            }
+        });
     }
 
+    public void linkToRegistryActivity() { //esta es la funcion para abrir la otr actividad a traves del boton
+        Intent intent = new Intent(this, RegistryActivity.class);
+        intent.putExtra("FROM", "RegistryActivity Class");
+        intent.putExtra("HORA", 8);
+        startActivity(intent);
+    }
 
     private void getDataFromView() {
         userTxt = user.getText().toString();
         passwordTxt = password.getText().toString();
 
-        if(validateUserAndPassword(userTxt, passwordTxt)){
+        if (validateUserAndPassword(userTxt, passwordTxt)) {
             Toast.makeText(this, "Hola " + userTxt + ", tu password es: " + passwordTxt, Toast.LENGTH_LONG).show();
         }
     }
@@ -87,8 +77,6 @@ public class MainActivity extends AppCompatActivity {
 
         return true;
     }
-
-
 
 
     @Override
