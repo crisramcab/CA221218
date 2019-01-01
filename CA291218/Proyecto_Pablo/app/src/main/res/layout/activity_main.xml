@@ -49,6 +49,11 @@
 
         <View
             android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"/>
+
+        <View
+            android:layout_width="wrap_content"
             android:layout_height="16dp"/>
 
         <EditText
@@ -60,7 +65,13 @@
             android:background="@color/colorBackgroundLogin"
             android:hint="@string/input_password"
             android:padding="10dp"
-            android:singleLine="true"/>
+            android:singleLine="true"
+            android:password="true"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"/>
+
         <View
             android:layout_width="wrap_content"
             android:layout_height="16dp"/>
