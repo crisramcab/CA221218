@@ -2,6 +2,9 @@
     <string name="app_name">Sistemas Distribuidos</string>
     <string name="input_user">Usuario</string>
     <string name="input_password">Contraseña</string>
+    <string name="input_confirm_password">Confirmar contaseña</string>
     <string name="text_button_login">Iniciar Sesión</string>
     <string name="text_not_have_account">¿No tienes cuenta?</string>
+    <string name="text_email">Email</string>
+    <string name="text_button_registry">Registrate</string>
 </resources>
