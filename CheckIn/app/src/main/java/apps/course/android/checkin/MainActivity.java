@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() { //
             @Override
             public void onClick(View view) {
-                linkToRegistryActivity();//se crea una funcion
+                linkToRegistryActivity();//se crea una funcion para hacer un link a otra actividad
 
             }
         });

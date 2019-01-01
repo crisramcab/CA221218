@@ -44,10 +44,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/login_edit_text_background"
-            android:hint="@string/user"
+            android:drawableLeft="@drawable/ic_baseline_account_box_24px"
+            android:hint="Usuario"
             android:maxLength="10"
             android:padding="10dp"
-            android:singleLine="true" />
+            android:singleLine="true"
+            />
 
         <View
             android:layout_width="wrap_content"
@@ -58,7 +60,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/login_edit_text_background"
-            android:hint="@string/password"
+            android:drawableLeft="@drawable/ic_baseline_https_24px"
+            android:hint="Contraseña"
             android:maxLength="10"
             android:padding="10dp"
             android:singleLine="true" />
@@ -87,8 +90,19 @@
             android:id="@+id/register"
             android:background="@drawable/login_button_background"
             android:singleLine="true"
-            android:text="Register"
+            android:text="Registarse"
             android:textColor="@color/colorAccent"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"></View>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/texto1"
+            android:textColor="@color/colorAccent"
+            android:text="¿Aun notienes una cuenta?"/>
 
 
 
