@@ -27,6 +27,7 @@
             </intent-filter>
         </service>
 
+        <activity android:name=".NavActivity"></activity>
     </application>
 
 </manifest>

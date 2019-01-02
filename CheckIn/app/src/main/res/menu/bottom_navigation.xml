@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_baseline_home_24px"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/nav_calendario"
+        android:icon="@drawable/ic_baseline_event_24px"
+        android:title="Calendario"/>
+
+    <item
+        android:id="@+id/nav_lista"
+        android:icon="@drawable/ic_baseline_list_alt_24px"
+        android:title="Lista"/>
 </menu>
