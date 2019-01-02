@@ -8,20 +8,31 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Variables de esta clase
     TextView txt;
 
+
+    //metodo
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-            txt = (TextView) findViewById(R.id.not_account);
-            txt.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    linkToRegistry();
-                }
-            });
+        initVariables();
+
+    }
+
+
+
+    public void initVariables(){
+        txt = (TextView) findViewById(R.id.not_account);
+
+        txt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                linkToRegistry();
+            }
+        });
 
 
     }
