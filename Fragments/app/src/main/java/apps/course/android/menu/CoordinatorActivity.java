@@ -1,19 +1,19 @@
 package apps.course.android.menu;
 
-import android.app.FragmentManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import apps.course.android.menu.Fragments.ChatFragment;
-import apps.course.android.menu.Fragments.HomeFragment;
-import apps.course.android.menu.Fragments.SettingsFragment;
+import apps.course.android.menu.fragments.ChatFragment;
+import apps.course.android.menu.fragments.HomeFragment;
+import apps.course.android.menu.fragments.SettingsFragment;
 
 public class CoordinatorActivity extends AppCompatActivity {
 
-    FragmentManager fragmentManager;
+    Fragment selectedFragment = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +24,8 @@ public class CoordinatorActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         // initFragmentManager
-        fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.container, new HomeFragment()).commit();
+        selectedFragment = new HomeFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, selectedFragment).commit();
 
         // setAction
         bottomNavigationView.setOnNavigationItemSelectedListener(
@@ -34,12 +34,17 @@ public class CoordinatorActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.navigation_home:
-                                fragmentManager.beginTransaction().replace(R.id.container, new HomeFragment()).commit();
+                                selectedFragment = new HomeFragment();
+                                break;
                             case R.id.navigation_chat:
-                                fragmentManager.beginTransaction().replace(R.id.container, new ChatFragment()).commit();
+                                selectedFragment = new ChatFragment();
+                                break;
                             case R.id.navigation_settings:
-                                fragmentManager.beginTransaction().replace(R.id.container, new SettingsFragment()).commit();
+                                selectedFragment = new SettingsFragment();
+                                break;
                         }
+
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container, selectedFragment).commit();
                         return true;
                     }
                 });
