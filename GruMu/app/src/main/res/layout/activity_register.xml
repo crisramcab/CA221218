@@ -15,34 +15,36 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_margin="15dp"
-            android:text="Registrate" />
+            <TextView
+                android:id="@+id/header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="167dp"
+                android:text="Registrate" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="Nombre"
                 android:gravity="center"
-
-                android:layout_marginTop="40dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="35dp"
                 android:ems="15"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:layout_below="@+id/header"
+                />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/apMaterno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/editText2"
+                android:layout_below="@+id/name"
                 android:gravity="center"
                 android:layout_marginTop="15dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="35dp"
                 android:ems="15"
                 android:hint="Primer apellido"
                 android:inputType="textPersonName" />
@@ -50,26 +52,26 @@
 
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/apPaterno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/editText"
+                android:layout_below="@+id/apMaterno"
                 android:gravity="center"
                 android:hint="Segundo apellido"
                 android:layout_marginTop="15dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="35dp"
                 android:ems="15"
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/editText6"
+                android:id="@+id/email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/editText3"
+                android:layout_below="@+id/apPaterno"
                 android:hint="Correo electrónico"
                 android:gravity="center"
                 android:layout_marginTop="15dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="35dp"
                 android:ems="15"
                 android:inputType="textEmailAddress" />
 
@@ -77,11 +79,76 @@
                 android:id="@+id/gender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/editText6"
-                android:layout_margin="15dp"
-                android:layout_marginTop="-251dp">
+                android:layout_below="@+id/email"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="35dp"
 
-            </Spinner>
+                />
+
+            <EditText
+                android:id="@+id/Phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gender"
+                android:hint="Número Telefónico"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="35dp"
+                android:ems="15"
+
+                />
+
+            <Spinner
+                android:id="@+id/userType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Phone"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="35dp"
+
+                />
+
+            <Spinner
+                android:id="@+id/services"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userType"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="15dp"
+
+            />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/terms"
+                android:text="He leído y acepto los terminos y condiciones de privacidad"
+                android:layout_below="@+id/services"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="15dp"
+
+                />
+
+            <Button
+                android:id="@+id/Register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/terms"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="15dp"
+                android:text="Registrate" />
+
+            <Button
+                android:id="@+id/Cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/Register"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@+id/Register"
+                android:layout_toRightOf="@+id/Register"
+                android:text="Cancelar" />
 
 
         </RelativeLayout>
