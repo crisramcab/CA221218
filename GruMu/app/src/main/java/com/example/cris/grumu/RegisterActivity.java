@@ -27,6 +27,7 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
             public void onClick(View v) {
                 Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                 Toast.makeText(RegisterActivity.this, "Cancelado",Toast.LENGTH_LONG).show();
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
@@ -36,6 +37,7 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
             public void onClick(View v) {
                 Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                 Toast.makeText(RegisterActivity.this, "Registrado!!",Toast.LENGTH_LONG).show();
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

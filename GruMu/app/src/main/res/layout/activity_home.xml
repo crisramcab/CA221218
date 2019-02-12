@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".Home">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="13dp"
+        android:text="Bienvenido a GRUMU"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="183dp" />
 </android.support.constraint.ConstraintLayout>

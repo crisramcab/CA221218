@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
                 startActivity(intent);
             }
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Home.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
                 startActivity(intent);
             }
